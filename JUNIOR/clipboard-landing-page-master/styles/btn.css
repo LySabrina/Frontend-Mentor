@@ -1,0 +1,17 @@
+.btn {
+  padding: 1rem;
+  border-radius: 2rem;
+  border:0;
+  color:white;
+}
+
+.btn--ios{
+    background-color: var(--color-green-500);
+}
+
+.btn--mac{
+    background-color: var(--color-blue-100);
+}
+.btn:hover{
+    cursor: pointer;
+}
