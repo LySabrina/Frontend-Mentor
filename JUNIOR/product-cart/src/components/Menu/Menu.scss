@@ -1,0 +1,9 @@
+@media screen and (min-width: 900px) {
+  .menu {
+    flex: 1;
+  }
+  .menu__cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

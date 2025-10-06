@@ -1,0 +1,27 @@
+@use "variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Red-Hat";
+}
+body {
+  background-color: variables.$rose-50;
+  position: relative;
+}
+
+#root {
+  padding: 1rem;
+}
+@font-face {
+  font-family: "Red-Hat";
+  src: url("../assets/fonts/RedHatText-VariableFont_wght.ttf");
+}
+
+@media screen and (min-width: 1000px) {
+  #root {
+    display: flex;
+    column-gap: 1rem;
+  }
+}

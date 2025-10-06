@@ -1,0 +1,72 @@
+@use "../../variables.scss";
+
+.card {
+  flex-basis: 33.33%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  &__btn {
+    position: absolute;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background-color: white;
+    border: 1px solid black;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    min-width: 10rem;
+    align-items: center;
+    justify-content: center;
+    &--red {
+      background-color: variables.$red;
+    }
+    &-text-white {
+      color: white;
+    }
+    &-circle-white {
+      border-radius: 50%;
+      width: 1rem;
+      height: 1rem;
+      border: 1px solid white;
+      text-align: center;
+      vertical-align: middle;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &--activate {
+      justify-content: space-around;
+      border: 0;
+    }
+  }
+
+  &__img-container {
+    position: relative;
+    margin: 1rem 0px 2rem 0px;
+    border: 3px solid transparent;
+    &--activate {
+      border-radius: 1rem;
+      border: 3px solid variables.$red;
+    }
+  }
+  &__img {
+    width: 100%;
+    border-radius: 1rem;
+    display: block;
+  }
+
+  &__name {
+    font-size: 1rem;
+    font-weight: variables.$fw-bold;
+  }
+  &__price {
+    color: variables.$red;
+    font-weight: variables.$fw-reg;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: variables.$desktop-width) {
+  .card {
+  }
+}

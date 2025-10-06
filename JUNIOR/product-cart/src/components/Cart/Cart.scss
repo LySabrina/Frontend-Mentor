@@ -1,0 +1,98 @@
+@use "src/variables.scss";
+
+.cart {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  align-self: flex-start;
+  > * {
+    margin: 1rem 0px;
+  }
+  &__header {
+    color: variables.$red;
+  }
+
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span:last-of-type {
+      font-weight: variables.$fw-bold;
+      font-size: 2rem;
+    }
+  }
+  &__info {
+    background-color: variables.$rose-100;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    span {
+      font-weight: variables.$fw-bold;
+    }
+  }
+
+  &__btn {
+    background-color: variables.$red;
+    padding: 1rem;
+    border: 0;
+    border-radius: 2rem;
+    width: 100%;
+    color: white;
+    font-size: 1rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__item {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid variables.$rose-100;
+    margin-bottom: 1rem;
+    &-name {
+      font-size: 1rem;
+      font-weight: variables.$fw-reg;
+      margin-bottom: 0.5rem;
+    }
+    &-amount {
+      color: variables.$red;
+      font-weight: variables.$fw-bold;
+      margin-right: 1rem;
+    }
+    &-price {
+      color: variables.$rose-300;
+      font-weight: variables.$fw-reg;
+
+      &--total {
+        color: variables.$rose-500;
+        font-weight: variables.$fw-bold;
+        margin-left: 0.5rem;
+      }
+    }
+    &-btn {
+      border: 2px solid variables.$rose-400;
+      color: variables.$rose-400;
+      background-color: transparent;
+      border-radius: 50%;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  &__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: variables.$rose-500;
+    font-weight: variables.$fw-reg;
+  }
+}
+
+@media screen and (min-width: variables.$desktop-width) {
+  .cart {
+    width: 20rem; // Issue where if I do not set a defined width and a user adds items, all the other html shift which is noticeable
+  }
+}
